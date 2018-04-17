@@ -18,7 +18,7 @@ This componenet automaticaly generates robots from parameters in configuration.
   - You might also want to change mime type to `text/plain`.
 - Modify parameters to accomplish your needs.
 
-## Example configuration
+### Example configuration
 
 ```
 services:
@@ -36,4 +36,29 @@ parameters:
             disallow:
               - '/example'
               - '/example2'
+```
+
+### Example presenter
+
+```
+class ExamplePresenter implements IPresenter
+{
+    /** @var  \Nepttune\Component\IRobotsFactory */
+    protected $iRobotsFactory;
+    
+    public function __construct(\Nepttune\Component\IRobotsFactory $IRobotsFactory)
+    {
+        $this->iRobotsFactory = $IRobotsFactory;
+    }
+    
+    public function actionRobots()
+    {
+        $this->getHttpResponse()->setContentType('text/plain');
+    }
+
+    protected function createComponentRobots()
+    {
+        return $this->iRobotsFactory->create();
+    }
+}
 ```
