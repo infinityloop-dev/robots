@@ -21,6 +21,8 @@ final class Robots extends BaseComponent
 
     public function __construct(array $robots)
     {
+        parent::__construct();
+        
         $this->robots = $robots;
     }
 
