@@ -22,7 +22,7 @@ This componenet automaticaly generates robots from parameters in configuration.
 - Register `\Nepttune\Component\IRobotsFactory` as service in cofiguration file, inject it into presenter, write `createComponent` method and use macro `{control}` in template file.
   - Just as any other component.
   - You need to pass robots configuration to factory service.
-  - You might also want to change mime type to `text/plain`.
+  - Content type is automaticaly set to `text/plain`.
 - Modify parameters to accomplish your needs.
 
 ### Example configuration
