@@ -57,11 +57,6 @@ class ExamplePresenter implements IPresenter
     {
         $this->iRobotsFactory = $IRobotsFactory;
     }
-    
-    public function actionRobots()
-    {
-        $this->getHttpResponse()->setContentType('text/plain');
-    }
 
     protected function createComponentRobots()
     {
