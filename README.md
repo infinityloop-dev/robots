@@ -58,7 +58,7 @@ class ExamplePresenter implements IPresenter
         $this->iRobotsFactory = $IRobotsFactory;
     }
 
-    protected function createComponentRobots()
+    protected function createComponentRobots() : \Nepttune\Component\Robots
     {
         return $this->iRobotsFactory->create();
     }
