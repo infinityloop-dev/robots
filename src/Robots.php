@@ -16,14 +16,21 @@ namespace Nepttune\Component;
 
 final class Robots extends BaseComponent
 {
-    /** @var array */
-    private $robots;
+    private static $defaultConfig = [
+        'all' => [
+            'name' => '*',
+            'disallow' => null,
+        ]
+    ];
 
-    public function __construct(array $robots)
+    /** @var array */
+    private $config;
+
+    public function __construct(array $config)
     {
         parent::__construct();
         
-        $this->robots = $robots;
+        $this->config = \array_merge_recursive(self::$defaultConfig, $config);
     }
 
     protected function beforeRender() : void
