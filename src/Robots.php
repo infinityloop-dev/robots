@@ -14,7 +14,7 @@ declare(strict_types = 1);
 
 namespace Nepttune\Component;
 
-final class Robots extends BaseComponent
+final class Robots extends \Nette\Application\UI\Control
 {
     private static $defaultConfig = [
         'all' => [
@@ -36,5 +36,12 @@ final class Robots extends BaseComponent
     protected function beforeRender() : void
     {
         $this->template->robots = $this->robots;
+    }
+    
+    public function render() : void
+    {
+        $this->beforeRender();
+        $this->template->setFile(__DIR__ . '/Robots.latte');
+        $this->template->render();
     }
 }
