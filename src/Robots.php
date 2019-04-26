@@ -27,9 +27,7 @@ final class Robots extends \Nette\Application\UI\Control
     private $config;
 
     public function __construct(array $config)
-    {
-        parent::__construct();
-        
+    {   
         $this->config = \array_merge_recursive(self::$defaultConfig, $config);
     }
 
