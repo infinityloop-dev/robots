@@ -33,7 +33,7 @@ final class Robots extends \Nette\Application\UI\Control
 
     protected function beforeRender() : void
     {
-        $this->template->robots = $this->robots;
+        $this->template->robots = $this->config;
     }
     
     public function render() : void
