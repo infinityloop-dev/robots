@@ -7,8 +7,7 @@ This componenet automaticaly generates robots from parameters in configuration.
 
 ## Dependencies
 
-- [nepttune/base-requirements](https://github.com/nepttune/base-requirements)
-- [nepttune/base-component](https://github.com/nepttune/base-component)
+- [nette/application](https://github.com/nette/application)
 
 ## How to use
 
